@@ -18,7 +18,7 @@ module.exports.createUser     = async (req, res)    =>
         // validations
         let validated      = true;
 
-        if(! /^[a-zA-Z\s]+$/.test(name))
+        if(!/^[a-zA-Z\s]+$/.test(name))
         {
             validated      = false;
             return         res.status(401).json
