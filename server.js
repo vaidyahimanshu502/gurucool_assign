@@ -1,16 +1,16 @@
-const express                     = require("express");
-const mongoose                    = require("mongoose");
-require("dotenv").config();       // configuring env file
+const express                           = require("express");
+const mongoose                          = require("mongoose");
+require("dotenv").config();             // configuring env file
 
 
-const app                         = express();
-const port                        = process.env.APP_PORT || 8000;
+const app                               = express();
+const port                              = process.env.APP_PORT || 8000;
 
 
-module.exports.startServer        = async () =>
+module.exports.startServer              = async () =>
 {
     try {
-        await mongoose.connect(process.env.DB_URL)
+        await mongoose.connect(process.env.LOCAL_DB_URL)
         .then(() =>
         {
            app.listen(port,  (err) => {
