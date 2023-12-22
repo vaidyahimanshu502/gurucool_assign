@@ -1,10 +1,8 @@
 const bcrypt                      =  require("bcypt");
 
-
-const saltRounds                  = 10;
-
 module.exports.hashPass           = async (password)   =>
 {
+    const saltRounds              = 10;
     try 
     {
        const hashedPass           = await  bcrypt.hash(password, saltRounds);
@@ -26,6 +24,8 @@ module.exports.comparePass        = async (password, hashedPassword) =>
         {
             return true;
         }
+        else 
+            return false;
     } 
     catch (error) 
     {
