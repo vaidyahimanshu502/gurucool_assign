@@ -67,7 +67,9 @@ module.exports.createUser     = async (req, res)    =>
                 })   
             }
         }
-    } catch (error) {
+    } 
+    catch (error) 
+    {
         let errMsg     = error.message;
 
         if(process.env.APP_ENVIRONMENT == "production")
