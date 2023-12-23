@@ -34,10 +34,15 @@ npm install
 ## Set Environment Variables
 
 Create a .env file in the root directory and set the following environment variables:
+DB_PASSWORD=<your-db_password-key>
 
-JWT_SECRET=<your-jwt-secret-key>
+APP_PORT = <your-db_password>
 
-MONGODB_URI=<your-mongodb-uri>
+APP_ENVIRONMENT= <your-app_environment>
+
+DB_URL=<your-db_url-key>
+
+JWT_SECRET=<your-jwt_secret-key>
 
 ## Start the Server
 npm start
