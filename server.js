@@ -10,7 +10,11 @@ const port                              = process.env.APP_PORT || 8000;
 module.exports.startServer              = async () =>
 {
     try {
-        await mongoose.connect(process.env.LOCAL_DB_URL)
+        await mongoose.connect(process.env.LOCAL_DB_URL, 
+        {
+             useNewUrlParser             : true,
+             useUnifiedTopology          : true
+        })
         .then(() =>
         {
            app.listen(port,  (err) => {
