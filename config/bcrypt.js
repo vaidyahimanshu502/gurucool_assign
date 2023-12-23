@@ -1,5 +1,6 @@
-const bcrypt                      =  require("bcypt");
+const bcrypt                      =  require("bcrypt");
 
+// bcrypting password
 module.exports.hashPass           = async (password)   =>
 {
     const saltRounds              = 10;
@@ -14,6 +15,7 @@ module.exports.hashPass           = async (password)   =>
     }
 }
 
+// comparing password
 module.exports.comparePass        = async (password, hashedPassword) =>
 {
     try 
