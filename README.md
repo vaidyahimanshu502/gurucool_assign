@@ -18,6 +18,10 @@ Frontend : EJS
 User Authentication: Secure registration and login system using JWT. Passwords are securely stored in the database using bcrypt.
 URL Shortening: Users can submit long URLs and get a shortened version.
 Redirection: When accessing a shortened URL, users are redirected to the original long URL.
+# Hosted URL 
+
+https://gurucool-assign.onrender.com
+
 # Setup Instructions
 ## Prerequisites
 Node.js and npm installed on your machine.
@@ -48,11 +52,6 @@ JWT_SECRET=<your-jwt_secret-key>
 npm start
 
 This will start the server on http://localhost:8000.
-
-
-## Hosted URL 
-
-https://gurucool-assign.onrender.com
 
 ## Access the App
 
