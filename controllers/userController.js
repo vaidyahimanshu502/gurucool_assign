@@ -63,14 +63,12 @@ module.exports.createUser                  = async (req, res)    =>
                     email                 : email,
                     password              : bcyptPassword
                 }) 
-                return                    res.status(200).json
-                ({
-                    success               : true,
-                    message               : "User created successfuly.",
-                    user                  : newUser
-                })   
-            }
-        }
+                if(newUser)
+                {
+                    return                res.redirect('/login'); 
+                }      
+            } 
+        }  
     } 
     catch (error) 
     {

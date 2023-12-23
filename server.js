@@ -1,7 +1,9 @@
 const express                           = require("express");
 const mongoose                          = require("mongoose");
 require("dotenv").config();             // configuring env file
-const userRouter                         = require("./routers/users");
+const userRouter                        = require("./routers/users");
+const urlRouter                         = require("./routers/url");
+const viewRouter                        = require("./routers/viewRouter");
 const cors                              = require("cors");
 
 const app                               = express();
@@ -9,12 +11,17 @@ const port                              = process.env.APP_PORT || 8000;
 
 //middleware
 app.use(cors());
-app.use(express.urlencoded());
-app.use(express.json()); 
+app.use(express.json()); // For parsing JSON requests
+app.use(express.urlencoded({ extended: true })); // For parsing URL-encoded form data
 
+// seting views
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 //routes
 app.use("/api/v1/user", userRouter); 
+app.use("/api/v1/url", urlRouter); 
+app.use("/", viewRouter);
 
 module.exports.startServer              = async () =>
 {
