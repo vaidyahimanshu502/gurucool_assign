@@ -49,6 +49,11 @@ npm start
 
 This will start the server on http://localhost:8000.
 
+
+## Hosted URL 
+
+https://gurucool-assign.onrender.com
+
 ## Access the App
 
 Open a web browser and navigate to http://localhost:3000 to access the web app.
