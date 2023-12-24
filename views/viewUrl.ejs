@@ -80,7 +80,7 @@
                 if (data.success) {
                     const shortUrl = data.shortUrl;
                     document.getElementById('shortenedUrl').textContent = shortUrl;
-                    document.getElementById('shortenedUrl').href = "/" + shortUrl;
+                    document.getElementById('shortenedUrl').href = "url/" + shortUrl;
                     document.getElementById('shortenedUrlContainer').style.display = 'block';
                 } else {
                     alert(data.message);
